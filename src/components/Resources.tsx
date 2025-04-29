@@ -7,38 +7,38 @@ import { ExternalLink } from 'lucide-react';
 const Resources = () => {
   const resources = [
     {
-      title: "AI Tools Directory",
-      description: "A comprehensive list of AI tools and platforms you can use or promote.",
+      title: "Ultimate AI Tools Directory 2025",
+      description: "A comprehensive list of 250+ AI tools and platforms you can use or promote, organized by monetization potential.",
       link: "#",
-      category: "Tools"
+      category: "Directory"
     },
     {
-      title: "Beginner's Guide to AI Marketing",
-      description: "Learn how to effectively market AI products and services.",
+      title: "AI Monetization Masterclass",
+      description: "Our premium guide to building, marketing and scaling AI-powered income streams from scratch.",
       link: "#",
-      category: "Guides"
+      category: "Premium Course"
     },
     {
-      title: "AI Business Models Canvas",
-      description: "Templates to help you structure your AI business for profitability.",
+      title: "AI Business Models Canvas Pack",
+      description: "15 ready-to-use templates to help you structure your AI business for maximum profitability.",
       link: "#",
       category: "Templates"
     },
     {
       title: "AI Product Launch Playbook",
-      description: "Step-by-step guide to successfully launching AI-powered products.",
+      description: "Step-by-step guide to successfully launching AI-powered products and services with proven marketing strategies.",
       link: "#",
-      category: "Guides"
+      category: "Guide"
     },
     {
-      title: "AI Income Case Studies",
-      description: "Real examples of people making money with AI technologies.",
+      title: "50 Real AI Income Case Studies",
+      description: "Detailed analysis of real people making $5,000 to $50,000+ monthly with various AI technologies.",
       link: "#",
       category: "Case Studies"
     },
     {
-      title: "Legal Considerations for AI Businesses",
-      description: "Important legal aspects to consider when monetizing AI.",
+      title: "Legal & Ethical AI Business Guide",
+      description: "Critical legal considerations for AI businesses including copyright, data privacy, and compliance with emerging regulations.",
       link: "#",
       category: "Legal"
     }
@@ -50,7 +50,7 @@ const Resources = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Valuable <span className="gradient-text">Resources</span></h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Access these resources to accelerate your journey toward AI-powered income. From guides to templates, we've got you covered.
+            Access these premium resources to accelerate your journey toward AI-powered income. From practical guides to ready-to-use templates, we've got everything you need to succeed.
           </p>
         </div>
         

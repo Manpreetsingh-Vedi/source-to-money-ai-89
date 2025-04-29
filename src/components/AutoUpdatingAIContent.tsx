@@ -23,18 +23,18 @@ const AutoUpdatingAIContent = () => {
       // For demo purposes, we're simulating AI-generated content
       const simulatedAIContent = [
         {
-          title: "New AI Tool: Text-to-Video Generator",
-          description: "Convert your text prompts into high-quality videos with this new AI tool that's making waves in content creation.",
+          title: "AI Art Generators Revenue Doubles in Q1 2025",
+          description: "The latest market analysis shows AI art generation platforms have seen a 112% increase in revenue, creating opportunities for artists who adapt to these new tools.",
           date: new Date().toISOString(),
         },
         {
-          title: "Price Drop: GPT-4 API Costs Reduced by 30%",
-          description: "Major AI providers have announced significant price reductions for their advanced language models, making AI more accessible.",
+          title: "New ChatGPT Fine-Tuning API Slashes Costs by 60%",
+          description: "OpenAI's latest update allows businesses to fine-tune models at significantly reduced costs, opening new possibilities for specialized AI applications.",
           date: new Date().toISOString(),
         },
         {
-          title: "AI Writing Assistant Market Analysis",
-          description: "Our AI analysis shows the writing assistant market is expected to grow by 45% this year, creating new opportunities for creators.",
+          title: "Voice Cloning Market Projected to Hit $8 Billion",
+          description: "AI voice synthesis technologies are creating lucrative opportunities in audiobook creation, localization, and accessibility services for entrepreneurs.",
           date: new Date().toISOString(),
         },
       ];
@@ -145,7 +145,11 @@ const AutoUpdatingAIContent = () => {
                 <CardHeader>
                   <CardTitle>{item.title}</CardTitle>
                   <CardDescription>
-                    {new Date(item.date).toLocaleDateString()}
+                    {new Date(item.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
