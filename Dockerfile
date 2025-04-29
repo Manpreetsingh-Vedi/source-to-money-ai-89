@@ -22,13 +22,24 @@ FROM nginx:alpine-slim
 # Copy built files from build stage to nginx serve directory
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Add nginx configuration with gzip enabled and IP detection for redirection
+# Add nginx configuration with HTTPS, IP detection, and gzip compression
 RUN echo 'server { \
   listen 80; \
   \
+  # Redirect HTTP to HTTPS \
+  return 301 https://$host$request_uri; \
+} \
+\
+server { \
+  listen 443 ssl; \
+  \
+  # SSL certificates \
+  ssl_certificate /etc/nginx/ssl/cert.pem; \
+  ssl_certificate_key /etc/nginx/ssl/key.pem; \
+  \
   # IP detection and redirection \
   if ($host ~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$) { \
-    return 301 $scheme://letaimakemoney.com$request_uri; \
+    return 301 https://letaimakemoney.com$request_uri; \
   } \
   \
   location / { \
@@ -43,8 +54,11 @@ RUN echo 'server { \
   gzip_min_length 1000; \
 }' > /etc/nginx/conf.d/default.conf
 
-# Expose port 80
-EXPOSE 80
+# Create directory for SSL certificates
+RUN mkdir -p /etc/nginx/ssl
+
+# Expose ports
+EXPOSE 80 443
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
